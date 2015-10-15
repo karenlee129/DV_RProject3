@@ -11,9 +11,19 @@ df <- read.csv(file_path)
 # Replace "." (i.e., period) with "_" in the column names.
 names(df) <- gsub("\\.+", "_", names(df))
 names(df) <- gsub("name", "restaurant_name", names(df))
+names(df) <- gsub("state", "states", names(df))
+df$states  <- gsub("mexico", "Mexico", df$states)
+df$states  <- gsub("morelos", "Morelos", df$states)
+df$states  <- gsub("slp", "San Luis Potosi", df$states)
+df$states  <- gsub("SLP", "San Luis Potosi", df$states)
+df$states  <- gsub("s.l.p.", "San Luis Potosi", df$states)
+df$states  <- gsub("S.L.P.", "San Luis Potosi", df$states)
+df$states  <- gsub("san luis potosi", "San Luis Potosi", df$states)
+df$states  <- gsub("san luis potos", "San Luis Potosi", df$states)
+df$states  <- gsub("tamaulipas", "Tamaulipas", df$states)
 
 str(df) # Uncomment this and  run just the lines to here to get column types to use for getting the list of measures.
-
+df
 measures <- c("placeID", "latitude", "longitude", "zip")
 #measures <- NA # Do this if there are no measures.
 
