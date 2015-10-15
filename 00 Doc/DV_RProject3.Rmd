@@ -1,0 +1,55 @@
+---
+title: "DV_RProject2"
+author: "Ronly Leung, Karen Lee"
+date: "October 15, 2015"
+output: html_document
+---
+```{r message = FALSE}
+require("jsonlite")
+require("RCurl")
+require(extrafont)
+require(ggplot2)
+require(tidyr)
+require(dplyr)
+```
+
+## Procedure for getting our csv data onto Oracle.
+
+#### 1. Require packages.
+
+![](s1.jpg)  
+
+#### 2. Modify R_ETL.R: set working directory and file path, read our csv, use str() to determine which variables are continuous, and change measures accordingly. 
+
+![](s2.jpg)  
+
+#### 3. Run the code to get the SQL CREATE TABLE command. 
+![](s3.jpg)  
+
+#### 4. Use the command to create a table in SQL Developer to create a new table. 
+![](s4.jpg)  
+
+#### 5. Open the table, click "Actions," and "Import Data..." 
+![](s5.jpg)  
+
+#### 6. Follow through the data import wizard (Match by Position)
+
+![](s6.jpg)
+![](s7.jpg)
+![](s8.jpg)
+![](s9.jpg)  
+
+#### 7. All data from the csv file data should now be entered into the SQL table you created.
+
+### Data Frame (GeoPlaces, Cuisine, Parking, Ratings)
+
+```{r tidy = TRUE}
+source("../01 Data/geo_etc.R", echo = TRUE)
+```
+
+#### Variables
+
+## Data Wrangling Visualizations
+
+#### Visualization 1
+ 
