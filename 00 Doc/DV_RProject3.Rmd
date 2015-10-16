@@ -1,5 +1,5 @@
 ---
-title: "DV_RProject2"
+title: "DV_RProject3"
 author: "Ronly Leung, Karen Lee"
 date: "October 15, 2015"
 output: html_document
@@ -47,22 +47,34 @@ require(dplyr)
 source("../01 Data/geo_etc.R", echo = TRUE)
 ```
 
-#### Variables
+## Variables
+Abstract: "The dataset was obtained from a recommender system prototype. The task was to generate a top-n list of restaurants according to the consumer preferences."
+All restaurants in this dataset are located in Mexico.  
+state: Nominal, Missing: 18  
+smoking_area: Nominal, 5 [none,only_at_bar,permitted,section,not_permitted]  
+price: Nominal, 3 [medium,low,high]  
+rating: Numeric, 3 [0,1,2]  
+Rcuisine: Nominal, 103 [Afghan,African,American,Armenian,Asian,Australian,Austrian,Bagels,Bakery,Bar,Bar_Pub_Brewery,Barbecue,Basque,Brazilian,Breakfast-Brunch,British,Burgers,Burmese,Cafe-Coffee_Shop,Cafeteria,Cajun-  
 
 ## Data Wrangling Visualizations
 
 #### Visualization 1
+Observations: American restaurants tend to be low-medium priced, Chinese restaurants are medium-high priced, Japanese restaurants tend to be medium priced, and bars/pubs and Mexican restaurant prices range from low to high.  
 ```{r tidy = TRUE}
 source("../03 Visualizations/visualization_1.R", echo = TRUE)
 ```
 
 #### Visualization 2
+Observations: Smoking in restaurants in Mexico is primarily not permitted. In Morelos, the restaurants that permit and restrict smoking are more evenly distributed. Restaurants in San Luis Potosi, generally either allow in a section or restrict smoking, as reflected by the density of the data. In Tamaulipas, restaurants either prohibit smoking or fully allow smoking; rather than having a designated section in contrast to restaurants in San Luis Potosi. There in no significant correlation between smoking, states, and rating of the establishment.
 ```{r tidy = TRUE}
 source("../03 Visualizations/visualization_2.R", echo = TRUE)
 ```
 
 #### Visualization 3
+Observations: Mexican restaurants primarily do not provide parking, however some do have public parking and very few have valet parking. French restaurants in the dataset all had some form of parking. All the Chinese restaurants have no parking. American restaurants showed similar data to Mexican restaurants but with a smaller sample size. French and Dutch-Belgian restaurants are usually the ones with street parking.
 ```{r tidy = TRUE}
 source("../03 Visualizations/visualization_3.R", echo = TRUE)
 ```
 
+Citation:  
+Blanca Vargas-Govea, Juan Gabriel Gonz√°lez-Serna, Rafael Ponce-Medell√???n. Effects of relevant contextual features in the performance of a restaurant recommender system. In RecSys‚???T11: Workshop on Context Aware Recommender Systems (CARS-2011), Chicago, IL, USA, October 23, 2011.
