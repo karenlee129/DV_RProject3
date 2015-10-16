@@ -58,11 +58,11 @@ source("../03 Visualizations/visualization_1.R", echo = TRUE)
 
 #### Visualization 2
 ```{r tidy = TRUE}
-source("..03 Visualizations/visualization_2.R", echo = TRUE)
+source("../03 Visualizations/visualization_2.R", echo = TRUE)
 ```
 
 #### Visualization 3
 ```{r tidy = TRUE}
-source("../03 Visualizations/visualization_3.R"", echo = TRUE)
+source("../03 Visualizations/visualization_3.R", echo = TRUE)
 ```
 
