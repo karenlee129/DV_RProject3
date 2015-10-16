@@ -1,0 +1,2 @@
+
+dplyr::right_join(parking, cuisine, by="PLACEID") %>% select(CUISINE, PARKING) %>% filter(CUISINE %in% c("American",  "Dutch-Belgian", "French", "Mexican", "Chinese", "Cafe_Coffee_Shop", "Bar_Pub_Brewery") ) %>% filter( PARKING %in% c("fee'", "none", "public", "street", "valet parking", "validated parking")) %>% ggplot(aes(x=PARKING, y=CUISINE, color = PARKING)) + geom_point() + geom_jitter(alpha=1, width=.05)
